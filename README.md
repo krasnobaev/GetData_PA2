@@ -2,7 +2,7 @@
 
 `run_analysis.R` is explained in `CodeBook.md`.
 
-Script asumes that Raw data is loaded in `./UCI HAR Dataset/` folder.
+Script assumes that Raw data is loaded in `./UCI HAR Dataset/` folder.
 
 In order to acquire Raw data you can run following commands:
 

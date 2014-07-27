@@ -47,9 +47,9 @@ $wc UCI\ HAR\ Dataset/*
 
 Steps done by the run_analysis.R to create Tidy dataset.
 
-0. Preparations
+### 0. Preparations
 
-0.0. Refine feature labels
+#### Refine feature labels
 
 Substitutes:
 - `-mean` `->` `-Mean`
@@ -61,22 +61,32 @@ expands:
 
 remove all parenthesis (`Ux0028` `(`, `Ux0029` `)` ), minus sign (`Ux002D`, `-`) and comma (`Ux002C`, `,`)
 
-create four column name sets:
+#### create four column name sets:
 - `colNamesAll` - all features, refined labels
 - `colNamesAllN` - all features, labels not refined
 - `colNamesStdMean` - only standard deviation and mean features, refined labels
 - `colNamesStdMeanN` - only standard deviation and mean features, labels not refined
 
-0.1. load all raw data with all features from `X_test.txt`, `y_test.txt`, `subject_test.txt`, `X_train.txt`, `y_train.txt`, `subject_train.txt` into appropriate variables.
+#### load all raw data
 
-1. (Step 1) Merging raw data into one dataframe
+all features from `X_test.txt`, `y_test.txt`, `subject_test.txt`, `X_train.txt`, `y_train.txt`, `subject_train.txt` loaded into appropriate variables.
 
-1.1. Merge X, y and subject by column in test and train subsets.
+### Step 1
 
-1.2. Merge test and train subsets by row.
+Merge raw data into one dataframe.
 
-2. (Step 2) Extract only the mean and standard deviation features with colNamesStdMean variable.
+1. Merge X, y and subject by column in test and train subsets.
 
-3. (Step 3,4) Substitute ActivityID number identificators with text labels from `'./UCI HAR Dataset/activity_labels.txt'`. Results will be written in `UCI_MeanStd.txt` csv file
+2. Merge test and train subsets by row.
 
-4. (Step 5) Create independent tidy data set with the average of each variable for each activity and each subject. Results will be written in `UCI_TidyData.txt` csv file
+### Step 2
+
+Extract only the mean and standard deviation features with `colNamesStdMean` variable.
+
+### Steps 3, 4
+
+Substitute ActivityID number identificators with text labels from `'./UCI HAR Dataset/activity_labels.txt'`. Results will be written in `UCI_MeanStd.txt` csv file
+
+### Step 5
+
+Create independent tidy data set with the average of each variable for each activity and each subject. Results will be written in `UCI_TidyData.txt` csv file

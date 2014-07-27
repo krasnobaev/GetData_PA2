@@ -62,6 +62,7 @@ levels(a) <- c(as.vector(activity$activity[order(activity$activity)]))
 MeanStdData[,2] <- a
 colnames(MeanStdData)[2] <- "activity"
 remove(a, activity)
+write.csv(MeanStdData, "UCI_MeanStd.txt", row.names=FALSE)
 
 ## 5. Create independent tidy data set
 ##    with the average of each variable
@@ -71,5 +72,5 @@ TidyData <- aggregate(MeanStdData[,3:ncol(MeanStdData)],
                            activity=MeanStdData$activity),
                       mean)
 TidyData <- data.frame(TidyData, row.names=NULL)
-write.csv(TidyData, "UCI - tidy data.txt", row.names=FALSE)
+write.csv(TidyData, "UCI_TidyData.txt", row.names=FALSE)
 

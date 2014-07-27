@@ -1,4 +1,4 @@
-run_analysis.R prepares two datasets: `UCI - MeanStd.txt` and `UCI - tidy data.txt`.
+`run_analysis.R` prepares two datasets: `UCI_MeanStd.txt` and `UCI_TidyData.txt`.
 
 Script asumes that raw data is loaded in `./UCI HAR Dataset` folder.
 
@@ -9,4 +9,4 @@ $wget https://d396qusza40orc.cloudfront.net/getdata%2Fprojectfiles%2FUCI%20HAR%2
 $unzip 'UCI HAR Dataset.zip'
 ```
 
-[Dataset homepage|http://archive.ics.uci.edu/ml/datasets/Human+Activity+Recognition+Using+Smartphones]
+[Dataset homepage](http://archive.ics.uci.edu/ml/datasets/Human+Activity+Recognition+Using+Smartphones)

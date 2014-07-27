@@ -85,8 +85,12 @@ Extract only the mean and standard deviation features with `colNamesStdMean` var
 
 ### Steps 3, 4. Activity labels
 
-Substitute ActivityID number identificators with text labels from `'./UCI HAR Dataset/activity_labels.txt'`. Results will be written in `UCI_MeanStd.txt` csv file
+Substitute ActivityID number identificators with text labels from `'./UCI HAR Dataset/activity_labels.txt'`.
+
+Results will be written in `UCI_MeanStd.txt` csv file
 
 ### Step 5. Calc averages
 
-Create independent tidy data set with the average of each variable for each activity and each subject. Results will be written in `UCI_TidyData.txt` csv file
+Create independent tidy data set with the average of each variable for each activity and each subject.
+
+Results will be written in `UCI_TidyData.txt` csv file

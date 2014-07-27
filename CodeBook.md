@@ -47,7 +47,7 @@ $wc UCI\ HAR\ Dataset/*
 
 Steps done by the run_analysis.R to create Tidy dataset.
 
-### 0. Preparations
+### Step 0. Preparations
 
 #### Refine feature labels
 
@@ -71,7 +71,7 @@ remove all parenthesis (`Ux0028` `(`, `Ux0029` `)` ), minus sign (`Ux002D`, `-`)
 
 all features from `X_test.txt`, `y_test.txt`, `subject_test.txt`, `X_train.txt`, `y_train.txt`, `subject_train.txt` loaded into appropriate variables.
 
-### Step 1
+### Step 1. Merging
 
 Merge raw data into one dataframe.
 
@@ -79,14 +79,14 @@ Merge raw data into one dataframe.
 
 2. Merge test and train subsets by row.
 
-### Step 2
+### Step 2. Filtering
 
 Extract only the mean and standard deviation features with `colNamesStdMean` variable.
 
-### Steps 3, 4
+### Steps 3, 4. Activity labels
 
 Substitute ActivityID number identificators with text labels from `'./UCI HAR Dataset/activity_labels.txt'`. Results will be written in `UCI_MeanStd.txt` csv file
 
-### Step 5
+### Step 5. Calc averages
 
 Create independent tidy data set with the average of each variable for each activity and each subject. Results will be written in `UCI_TidyData.txt` csv file
